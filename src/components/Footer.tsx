@@ -1,5 +1,5 @@
-import logoImage from 'figma:asset/a5311816e964141c6c5c555979c2eb1351d0fe85.png';
 import { useRouter } from './Router';
+import { WolstenIconWhite } from './logos/WolstenIconWhite';
 
 const footerLinks = {
   company: [
@@ -30,12 +30,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <img 
-                src={logoImage} 
-                alt="Wolsten Studios logo" 
-                className="w-auto"
-                style={{ height: '40px', display: 'block' }}
-              />
+              <WolstenIconWhite style={{ height: '40px', width: 'auto', display: 'block' }} />
             </div>
             <p style={{ color: '#949797', fontSize: '0.938rem', lineHeight: '1.7', maxWidth: '400px' }}>
               Premium transformation studio building brands, systems, and digital experiences for founder-led businesses.

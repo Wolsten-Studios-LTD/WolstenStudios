@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { useRouter } from './Router';
-import logoImage from 'figma:asset/1f9262f184061b032424382743e6dd199dd63b34.png';
+import { WolstenIcon } from './logos/WolstenIcon';
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,12 +26,7 @@ export function Navigation() {
         className="flex items-center border-0 bg-transparent p-0 cursor-pointer" 
         aria-label="Wolsten Studios home"
       >
-        <img 
-          src={logoImage} 
-          alt="Wolsten Studios logo" 
-          className="w-auto"
-          style={{ height: '32px', display: 'block' }}
-        />
+        <WolstenIcon style={{ height: '32px', width: 'auto', display: 'block' }} />
       </button>
 
       {/* Desktop Navigation */}
@@ -83,120 +78,99 @@ export function Navigation() {
         </button>
         <button 
           onClick={() => handleNavigate('/contact')}
-          className="transition-all duration-200 border-0 bg-transparent cursor-pointer" 
-          style={{ color: '#606260', textDecoration: 'none' }}
+          className="transition-all duration-200 border-0 bg-transparent cursor-pointer px-6 py-3 rounded-full" 
+          style={{ 
+            backgroundColor: '#00A5C7',
+            color: '#FAFAFC',
+            boxShadow: '0 4px 12px rgba(0, 165, 199, 0.25)',
+          }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.color = '#00A5C7';
+            e.currentTarget.style.backgroundColor = '#0090AF';
             e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 6px 20px rgba(0, 165, 199, 0.35)';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.color = '#606260';
+            e.currentTarget.style.backgroundColor = '#00A5C7';
             e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 165, 199, 0.25)';
           }}
         >
-          Contact
+          Get Started
         </button>
       </div>
 
-      {/* Mobile Hamburger Button */}
+      {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="md:hidden p-2 transition-opacity hover:opacity-70"
-        style={{ color: '#0E0E0E' }}
-        aria-label="Toggle menu"
+        className="md:hidden p-2 border-0 bg-transparent cursor-pointer"
+        style={{ color: '#2D3436' }}
+        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={isMenuOpen}
       >
         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div
+        <div 
           className="md:hidden absolute top-full left-0 right-0 backdrop-blur-sm"
-          style={{
+          style={{ 
             backgroundColor: 'rgba(250, 250, 252, 0.98)',
             borderBottom: '1px solid rgba(235, 235, 239, 0.6)',
           }}
+          role="navigation"
+          aria-label="Mobile navigation"
         >
-          <div className="flex flex-col px-8 py-6 space-y-6">
+          <div className="px-8 py-6 flex flex-col gap-6">
             <button 
               onClick={() => handleNavigate('/case-studies')}
-              className="transition-all duration-200 border-0 bg-transparent cursor-pointer text-left"
-              style={{ color: '#606260', fontSize: '1rem', letterSpacing: '0.02em', textDecoration: 'none' }}
+              className="transition-all duration-200 border-0 bg-transparent cursor-pointer text-left" 
+              style={{ color: '#606260', fontSize: '1rem' }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = '#00A5C7';
-                e.currentTarget.style.paddingLeft = '8px';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.color = '#606260';
-                e.currentTarget.style.paddingLeft = '0px';
               }}
             >
               Case Studies
             </button>
             <button 
               onClick={() => handleNavigate('/sprintos')}
-              className="transition-all duration-200 border-0 bg-transparent cursor-pointer text-left"
-              style={{ color: '#606260', fontSize: '1rem', letterSpacing: '0.02em', textDecoration: 'none' }}
+              className="transition-all duration-200 border-0 bg-transparent cursor-pointer text-left" 
+              style={{ color: '#606260', fontSize: '1rem' }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = '#00A5C7';
-                e.currentTarget.style.paddingLeft = '8px';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.color = '#606260';
-                e.currentTarget.style.paddingLeft = '0px';
               }}
             >
               SprintOS™
             </button>
             <button 
               onClick={() => handleNavigate('/about')}
-              className="transition-all duration-200 border-0 bg-transparent cursor-pointer text-left"
-              style={{ color: '#606260', fontSize: '1rem', letterSpacing: '0.02em', textDecoration: 'none' }}
+              className="transition-all duration-200 border-0 bg-transparent cursor-pointer text-left" 
+              style={{ color: '#606260', fontSize: '1rem' }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = '#00A5C7';
-                e.currentTarget.style.paddingLeft = '8px';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.color = '#606260';
-                e.currentTarget.style.paddingLeft = '0px';
               }}
             >
               About
             </button>
             <button 
               onClick={() => handleNavigate('/contact')}
-              className="transition-all duration-200 border-0 bg-transparent cursor-pointer text-left"
-              style={{ color: '#606260', fontSize: '1rem', letterSpacing: '0.02em', textDecoration: 'none' }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = '#00A5C7';
-                e.currentTarget.style.paddingLeft = '8px';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#606260';
-                e.currentTarget.style.paddingLeft = '0px';
-              }}
-            >
-              Contact
-            </button>
-            <button 
-              onClick={() => handleNavigate('/application')}
-              className="transition-all duration-200 px-5 py-3 text-center border-0 cursor-pointer"
+              className="transition-all duration-200 border-0 bg-transparent cursor-pointer px-6 py-3 rounded-full text-center" 
               style={{ 
+                backgroundColor: '#00A5C7',
                 color: '#FAFAFC',
-                backgroundColor: '#0E0E0E',
-                fontSize: '1rem', 
-                letterSpacing: '0.01em', 
-                textDecoration: 'none',
-                fontWeight: 500,
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#00A5C7';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#0E0E0E';
+                boxShadow: '0 4px 12px rgba(0, 165, 199, 0.25)',
               }}
             >
-              Apply for SprintOS™
+              Get Started
             </button>
           </div>
         </div>
