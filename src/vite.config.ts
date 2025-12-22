@@ -9,5 +9,9 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['motion/react', 'jotai']
-  }
+  },
+  build: {
+    target: 'esnext',
+    outDir: 'dist',
+  },
 })
