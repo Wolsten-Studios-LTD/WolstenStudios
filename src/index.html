@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17799960396"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17799960396');
+      gtag('config', 'G-C1NXZVQVKD');
+    </script>
+    
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Transformation studio rebuilding brand, digital, and growth foundations for businesses €500k–€20m revenue. SprintOS™ transforms your infrastructure in 7–14 days." />
+    <title>Wolsten Studios | Premium Transformation Studio for Established Businesses</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.wolstenstudios.com" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Wolsten Studios",
+      "description": "Transformation studio rebuilding brand, digital, and growth foundations for established businesses",
+      "url": "https://www.wolstenstudios.com",
+      "logo": "https://www.wolstenstudios.com/wolsten-logo.svg",
+      "image": "https://www.wolstenstudios.com/og-image.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Dan Wolstenholme",
+        "sameAs": "https://www.linkedin.com/in/dan-wolstenholme/"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/dan-wolstenholme/"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "SprintOS™ Transformation Sprint",
+        "description": "7-14 day transformation sprint rebuilding brand, digital, and growth foundations",
+        "priceRange": "€15,000-€35,000"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Wolsten Studios",
+      "url": "https://www.wolstenstudios.com",
+      "description": "Premium transformation studio for established businesses",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Wolsten Studios"
+      }
+    }
+    </script>
+    
+    <!-- Open Graph / Social Sharing Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.wolstenstudios.com" />
+    <meta property="og:title" content="Wolsten Studios | Premium Transformation Studio for Established Businesses" />
+    <meta property="og:description" content="Transformation studio rebuilding brand, digital, and growth foundations for businesses €500k–€20m revenue. SprintOS™ transforms your infrastructure in 7–14 days." />
+    <meta property="og:site_name" content="Wolsten Studios" />
+    <meta property="og:image" content="https://www.wolstenstudios.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_GB" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Wolsten Studios | Premium Transformation Studio for Established Businesses" />
+    <meta name="twitter:description" content="Transformation studio rebuilding brand, digital, and growth foundations for businesses €500k–€20m revenue. SprintOS™ transforms your infrastructure in 7–14 days." />
+    <meta name="twitter:image" content="https://www.wolstenstudios.com/og-image.png" />
+  </head>
+  <body>
+    <script>
+      // Convert query parameters to hash routing for Google Ads compatibility
+      (function() {
+        console.log('[Wolsten Router] Starting query parameter check...');
+        console.log('[Wolsten Router] Current URL:', window.location.href);
+        console.log('[Wolsten Router] Current hash:', window.location.hash);
+        
+        var params = new URLSearchParams(window.location.search);
+        var page = params.get('page');
+        
+        console.log('[Wolsten Router] Page parameter:', page);
+        
+        // If we have a page parameter, convert to hash routing
+        if (page) {
+          var targetHash = '#/' + page;
+          console.log('[Wolsten Router] Converting to hash:', targetHash);
+          
+          // Replace the entire URL with clean version + hash
+          var cleanUrl = window.location.origin + window.location.pathname + targetHash;
+          console.log('[Wolsten Router] Replacing with:', cleanUrl);
+          window.location.replace(cleanUrl);
+          return;
+        }
+        
+        // Extract hash from the full URL if browser preserved it
+        var fullUrl = window.location.href;
+        var hashMatch = fullUrl.match(/(#\/.+)$/);
+        var currentHash = window.location.hash;
+        
+        // If we found a hash in the URL but it's not in location.hash
+        if (hashMatch && hashMatch[1] && (!currentHash || currentHash === '#' || currentHash === '#/')) {
+          console.log('[Wolsten Router] Restoring hash from URL match:', hashMatch[1]);
+          window.location.hash = hashMatch[1];
+        }
+        
+        // Check if we arrived here without a hash but expected one from sessionStorage
+        if ((!currentHash || currentHash === '#' || currentHash === '#/')) {
+          var stored = sessionStorage.getItem('wolsten_intended_path');
+          if (stored && stored !== '#' && stored !== '#/') {
+            console.log('[Wolsten Router] Restoring hash from sessionStorage:', stored);
+            sessionStorage.removeItem('wolsten_intended_path');
+            window.location.replace(window.location.origin + '/' + stored);
+          }
+        }
+        
+        // Store current hash for restoration after redirects
+        if (currentHash && currentHash !== '#' && currentHash !== '#/') {
+          sessionStorage.setItem('wolsten_intended_path', currentHash);
+        }
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/App.tsx"></script>
+  </body>
+</html>

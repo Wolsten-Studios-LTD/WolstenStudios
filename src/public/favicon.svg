@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="64" height="64" fill="#FFFFFF"/>
+  
+  <!-- Wolsten "W" Mark - using the provided logo design -->
+  <path d="M 12 18 L 22 46 L 32 28 L 42 46 L 52 18 L 47 18 L 42 38 L 32 20 L 22 38 L 17 18 Z" fill="#0E0E0E" stroke="#0E0E0E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
