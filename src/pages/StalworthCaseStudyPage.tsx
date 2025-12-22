@@ -215,7 +215,7 @@ export function StalworthCaseStudyPage() {
           <p className="lede">Trusted professionals—invisible online. We changed that.</p>
         </header>
 
-        <main>
+        <main id="main-content">
           <section>
             <h2>The Client</h2>
             <p>Stalworth Pro handles cross-border tax and accounting. The kind of work where precision matters and trust is everything.</p>

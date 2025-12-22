@@ -151,233 +151,89 @@ export function BunsAndGunsProposalPage() {
         }
       `}</style>
 
-      <div className="proposal-page max-w-[720px] mx-auto px-8">
-        {/* Header */}
-        <header className="pt-16 pb-12 border-b border-[var(--rule)] mb-16">
-          <WolstenLogo className="w-[50px] h-auto mb-8" />
+      <main id="main-content">
+        <div className="proposal-page max-w-[720px] mx-auto px-8">
+          {/* Header */}
+          <header className="pt-16 pb-12 border-b border-[var(--rule)] mb-16">
+            <WolstenLogo className="w-[50px] h-auto mb-8" />
 
-          <div className="text-xs text-[var(--proposal-muted)] uppercase tracking-[0.12em] mb-6">
-            Growth Proposal · December 2025 · Confidential
-          </div>
-
-          <h1 className="text-[clamp(2.2rem,5vw,3rem)] font-light leading-[1.15] tracking-[-0.02em] mb-6">
-            Buns & Guns
-          </h1>
-
-          <p className="text-[1.15rem] text-[var(--proposal-muted)] max-w-[580px] leading-[1.6]">
-            Digital infrastructure and strategic growth
-            partnership. A comprehensive plan to establish
-            market dominance and prepare for franchise
-            expansion.
-          </p>
-        </header>
-
-        <main className="pb-16">
-          {/* Executive Summary */}
-          <section className="mb-14">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
-              Executive Summary
-            </h2>
-            <p className="mb-5">
-              Buns & Guns has built something exceptional. The
-              product is outstanding — Irish beef, homemade
-              everything, 700 calories. The brand identity is
-              strong. The physical space reflects a business
-              that understands quality.
-            </p>
-            <p className="mb-5">
-              What's missing is the digital infrastructure to
-              match. Despite having one of the best burgers in
-              Cyprus, customers searching online won't find you.
-              Competitors with inferior products appear first.
-            </p>
-            <p className="mb-5">
-              This proposal outlines a growth partnership
-              designed to fix that — and position the brand for
-              franchise expansion.
-            </p>
-            <div className="text-[1.1rem] italic text-[var(--proposal-muted)] text-center p-8 my-8 border-l-[3px] border-[var(--proposal-accent)] bg-white">
-              "You've built an amazing product. Now let's build
-              an amazing business."
+            <div className="text-xs text-[var(--proposal-muted)] uppercase tracking-[0.12em] mb-6">
+              Growth Proposal · December 2025 · Confidential
             </div>
-          </section>
 
-          {/* The Gap */}
-          <section className="mb-14">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
-              The Gap
-            </h2>
-            <p className="mb-6">
-              Despite strong product and branding, Buns & Guns
-              is invisible where it matters most:
+            <h1 className="text-[clamp(2.2rem,5vw,3rem)] font-light leading-[1.15] tracking-[-0.02em] mb-6">
+              Buns & Guns
+            </h1>
+
+            <p className="text-[1.15rem] text-[var(--proposal-muted)] max-w-[580px] leading-[1.6]">
+              Digital infrastructure and strategic growth
+              partnership. A comprehensive plan to establish
+              market dominance and prepare for franchise
+              expansion.
             </p>
+          </header>
 
-            <div className="my-6">
-              {[
-                {
-                  label: "No website",
-                  desc: "Customers searching for 'burgers Pyla' won't find you",
-                },
-                {
-                  label: "No Google presence",
-                  desc: "Not appearing in local search or Maps",
-                },
-                {
-                  label: "No LinkedIn",
-                  desc: "Zero visibility to investors or partners",
-                },
-                {
-                  label: "Unstructured ads",
-                  desc: "Boosted posts without strategy",
-                },
-                {
-                  label: "No franchise base",
-                  desc: "Nothing to support Limassol expansion",
-                },
-              ].map((item, i, arr) => (
-                <div
-                  key={i}
-                  className={`flex py-4 ${i !== arr.length - 1 ? "border-b border-[var(--rule)]" : ""}`}
-                >
-                  <div className="w-[140px] flex-shrink-0 font-medium text-[var(--proposal-accent)]">
-                    {item.label}
-                  </div>
-                  <div className="flex-1 text-[var(--proposal-muted)]">
-                    {item.desc}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* The Solution */}
-          <section className="mb-14">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
-              The Solution
-            </h2>
-            <p className="mb-5">
-              A complete digital transformation delivered in two
-              phases:
-            </p>
-
-            <h3 className="text-[1.1rem] font-medium mt-8 mb-4 text-[var(--ink)]">
-              Phase 1: Foundation — December
-            </h3>
-            <p className="mb-6">
-              Immediate infrastructure build to establish
-              digital presence.
-            </p>
-            <div className="bg-white p-6 px-8 my-6 border-l-[3px] border-[var(--proposal-accent)]">
-              <p className="m-0 text-[var(--proposal-muted)] text-[0.95rem]">
-                Premium website (React/Tailwind) · Domain +
-                email · Google Business Profile · Google Ads
-                setup · Meta Ads strategy · LinkedIn pages ·
-                Brand assets · QR menu · Business cards · Email
-                signatures · 2026 growth strategy
+          <main className="pb-16">
+            {/* Executive Summary */}
+            <section className="mb-14">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
+                Executive Summary
+              </h2>
+              <p className="mb-5">
+                Buns & Guns has built something exceptional. The
+                product is outstanding — Irish beef, homemade
+                everything, 700 calories. The brand identity is
+                strong. The physical space reflects a business
+                that understands quality.
               </p>
-            </div>
-
-            <h3 className="text-[1.1rem] font-medium mt-8 mb-4 text-[var(--ink)]">
-              Phase 2: Growth — January to March
-            </h3>
-            <p className="mb-6">
-              Ongoing management and optimisation to build
-              momentum.
-            </p>
-            <div className="bg-white p-6 px-8 my-6 border-l-[3px] border-[var(--proposal-accent)]">
-              <p className="m-0 text-[var(--proposal-muted)] text-[0.95rem]">
-                Google Ads management · Meta Ads management ·
-                LinkedIn content (3-4 posts/week) · Weekly calls
-                (if required) · Performance tracking · Investor
-                introductions · Franchise positioning · Limassol
-                expansion support
+              <p className="mb-5">
+                What's missing is the digital infrastructure to
+                match. Despite having one of the best burgers in
+                Cyprus, customers searching online won't find you.
+                Competitors with inferior products appear first.
               </p>
-            </div>
-
-            <div className="bg-[var(--proposal-accent)] text-white p-6 px-8 my-8 font-medium text-center">
-              The Goal: Top of Google for 'burgers Pyla' by end
-              of Q1 2026
-            </div>
-          </section>
-
-          {/* Investment Options */}
-          <section className="mb-14">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
-              Investment Options
-            </h2>
-            <p className="mb-8">
-              You've invested significantly in your physical
-              presence — the fit-out, the equipment, the
-              signage, the experience. Your digital presence
-              needs to match. It needs to run through the
-              building with the same quality and intent. This
-              isn't an expense. It's infrastructure.
-            </p>
-
-            {/* Option 1 */}
-            <div className="border border-[var(--rule)] p-8 my-8 bg-white">
-              <div className="flex justify-between items-start mb-4">
-                <div className="text-[1.1rem] font-medium">
-                  Option 1: Digital Foundation
-                </div>
+              <p className="mb-5">
+                This proposal outlines a growth partnership
+                designed to fix that — and position the brand for
+                franchise expansion.
+              </p>
+              <div className="text-[1.1rem] italic text-[var(--proposal-muted)] text-center p-8 my-8 border-l-[3px] border-[var(--proposal-accent)] bg-white">
+                "You've built an amazing product. Now let's build
+                an amazing business."
               </div>
-              <p className="text-[var(--proposal-muted)] mb-6 text-[0.95rem]">
-                Complete digital infrastructure, built to the
-                same standard as your physical space, then
-                handed over for you to manage. Website, domain,
-                email, Google Business, Google Ads setup,
-                LinkedIn page, brand assets, QR menu, business
-                cards, email signatures. You own it. You run it.
-              </p>
-              <div className="text-2xl font-light text-center pt-4 border-t border-[var(--rule)]">
-                €3,500
-              </div>
-              <p className="text-[0.8rem] text-[var(--proposal-muted)] text-center mt-2">
-                One-time investment · Self-managed from handover
-              </p>
-            </div>
+            </section>
 
-            {/* Option 2 - Recommended */}
-            <div className="border-2 border-[var(--proposal-accent)] p-8 my-8 bg-white">
-              <div className="flex justify-between items-start mb-4">
-                <div className="text-[1.1rem] font-medium">
-                  Option 2: Growth Partnership
-                </div>
-                <div className="text-[0.65rem] font-semibold uppercase tracking-[0.1em] bg-[var(--proposal-accent)] text-white py-1 px-3">
-                  Recommended
-                </div>
-              </div>
-              <p className="text-[var(--proposal-muted)] mb-6 text-[0.95rem]">
-                Everything above, plus I run it for you. You
-                focus on the kitchen and the customers. I focus
-                on getting more of them through the door.
+            {/* The Gap */}
+            <section className="mb-14">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
+                The Gap
+              </h2>
+              <p className="mb-6">
+                Despite strong product and branding, Buns & Guns
+                is invisible where it matters most:
               </p>
 
               <div className="my-6">
                 {[
                   {
-                    label: "Ads management",
-                    desc: "Google + Meta — strategy, budgets, optimisation. No more boosted posts.",
+                    label: "No website",
+                    desc: "Customers searching for 'burgers Pyla' won't find you",
                   },
                   {
-                    label: "LinkedIn content",
-                    desc: "3-4 posts per week. I write, I post, I build the audience.",
+                    label: "No Google presence",
+                    desc: "Not appearing in local search or Maps",
                   },
                   {
-                    label: "Weekly calls",
-                    desc: "If required. We stay in sync. No surprises.",
+                    label: "No LinkedIn",
+                    desc: "Zero visibility to investors or partners",
                   },
                   {
-                    label: "Performance tracking",
-                    desc: "Reports, not guesswork. You see what's working.",
+                    label: "Unstructured ads",
+                    desc: "Boosted posts without strategy",
                   },
                   {
-                    label: "Investor introductions",
-                    desc: "When traction is proven, I open doors.",
-                  },
-                  {
-                    label: "Franchise positioning",
-                    desc: "Building toward Limassol and beyond.",
+                    label: "No franchise base",
+                    desc: "Nothing to support Limassol expansion",
                   },
                 ].map((item, i, arr) => (
                   <div
@@ -393,213 +249,359 @@ export function BunsAndGunsProposalPage() {
                   </div>
                 ))}
               </div>
+            </section>
 
-              <div className="text-2xl font-light text-center pt-4 border-t border-[var(--rule)]">
-                €5,500 setup + €1,500/month
-              </div>
-              <p className="text-[0.8rem] text-[var(--proposal-muted)] text-center mt-2">
-                3-month minimum commitment
+            {/* The Solution */}
+            <section className="mb-14">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
+                The Solution
+              </h2>
+              <p className="mb-5">
+                A complete digital transformation delivered in two
+                phases:
               </p>
-            </div>
 
-            <h3 className="text-[1.1rem] font-medium mt-8 mb-4 text-[var(--ink)]">
-              Investment Breakdown
-            </h3>
-            <div className="my-8">
-              {[
-                {
-                  label: "December: Setup + Strategy",
-                  amount: "€5,500",
-                },
-                {
-                  label: "January: Growth Management",
-                  amount: "€1,500",
-                },
-                {
-                  label: "February: Growth Management",
-                  amount: "€1,500",
-                },
-                {
-                  label: "March: Growth Management",
-                  amount: "€1,500",
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex justify-between py-3 border-b border-[var(--rule)]"
-                >
-                  <span>{item.label}</span>
-                  <span className="font-medium">
-                    {item.amount}
-                  </span>
-                </div>
-              ))}
-              <div className="flex justify-between bg-[var(--proposal-accent)] text-white m-0 -mx-4 p-4 font-medium">
-                <span>Total Commitment</span>
-                <span>€10,000</span>
+              <h3 className="text-[1.1rem] font-medium mt-8 mb-4 text-[var(--ink)]">
+                Phase 1: Foundation — December
+              </h3>
+              <p className="mb-6">
+                Immediate infrastructure build to establish
+                digital presence.
+              </p>
+              <div className="bg-white p-6 px-8 my-6 border-l-[3px] border-[var(--proposal-accent)]">
+                <p className="m-0 text-[var(--proposal-muted)] text-[0.95rem]">
+                  Premium website (React/Tailwind) · Domain +
+                  email · Google Business Profile · Google Ads
+                  setup · Meta Ads strategy · LinkedIn pages ·
+                  Brand assets · QR menu · Business cards · Email
+                  signatures · 2026 growth strategy
+                </p>
               </div>
-            </div>
-          </section>
 
-          {/* Why Wolsten Studios */}
-          <section className="mb-14">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
-              Why Wolsten Studios
-            </h2>
-            <p className="mb-6">
-              We don't just advise, we build.
+              <h3 className="text-[1.1rem] font-medium mt-8 mb-4 text-[var(--ink)]">
+                Phase 2: Growth — January to March
+              </h3>
+              <p className="mb-6">
+                Ongoing management and optimisation to build
+                momentum.
+              </p>
+              <div className="bg-white p-6 px-8 my-6 border-l-[3px] border-[var(--proposal-accent)]">
+                <p className="m-0 text-[var(--proposal-muted)] text-[0.95rem]">
+                  Google Ads management · Meta Ads management ·
+                  LinkedIn content (3-4 posts/week) · Weekly calls
+                  (if required) · Performance tracking · Investor
+                  introductions · Franchise positioning · Limassol
+                  expansion support
+                </p>
+              </div>
+
+              <div className="bg-[var(--proposal-accent)] text-white p-6 px-8 my-8 font-medium text-center">
+                The Goal: Top of Google for 'burgers Pyla' by end
+                of Q1 2026
+              </div>
+            </section>
+
+            {/* Investment Options */}
+            <section className="mb-14">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
+                Investment Options
+              </h2>
+              <p className="mb-8">
+                You've invested significantly in your physical
+                presence — the fit-out, the equipment, the
+                signage, the experience. Your digital presence
+                needs to match. It needs to run through the
+                building with the same quality and intent. This
+                isn't an expense. It's infrastructure.
+              </p>
+
+              {/* Option 1 */}
+              <div className="border border-[var(--rule)] p-8 my-8 bg-white">
+                <div className="flex justify-between items-start mb-4">
+                  <div className="text-[1.1rem] font-medium">
+                    Option 1: Digital Foundation
+                  </div>
+                </div>
+                <p className="text-[var(--proposal-muted)] mb-6 text-[0.95rem]">
+                  Complete digital infrastructure, built to the
+                  same standard as your physical space, then
+                  handed over for you to manage. Website, domain,
+                  email, Google Business, Google Ads setup,
+                  LinkedIn page, brand assets, QR menu, business
+                  cards, email signatures. You own it. You run it.
+                </p>
+                <div className="text-2xl font-light text-center pt-4 border-t border-[var(--rule)]">
+                  €3,500
+                </div>
+                <p className="text-[0.8rem] text-[var(--proposal-muted)] text-center mt-2">
+                  One-time investment · Self-managed from handover
+                </p>
+              </div>
+
+              {/* Option 2 - Recommended */}
+              <div className="border-2 border-[var(--proposal-accent)] p-8 my-8 bg-white">
+                <div className="flex justify-between items-start mb-4">
+                  <div className="text-[1.1rem] font-medium">
+                    Option 2: Growth Partnership
+                  </div>
+                  <div className="text-[0.65rem] font-semibold uppercase tracking-[0.1em] bg-[var(--proposal-accent)] text-white py-1 px-3">
+                    Recommended
+                  </div>
+                </div>
+                <p className="text-[var(--proposal-muted)] mb-6 text-[0.95rem]">
+                  Everything above, plus I run it for you. You
+                  focus on the kitchen and the customers. I focus
+                  on getting more of them through the door.
+                </p>
+
+                <div className="my-6">
+                  {[
+                    {
+                      label: "Ads management",
+                      desc: "Google + Meta — strategy, budgets, optimisation. No more boosted posts.",
+                    },
+                    {
+                      label: "LinkedIn content",
+                      desc: "3-4 posts per week. I write, I post, I build the audience.",
+                    },
+                    {
+                      label: "Weekly calls",
+                      desc: "If required. We stay in sync. No surprises.",
+                    },
+                    {
+                      label: "Performance tracking",
+                      desc: "Reports, not guesswork. You see what's working.",
+                    },
+                    {
+                      label: "Investor introductions",
+                      desc: "When traction is proven, I open doors.",
+                    },
+                    {
+                      label: "Franchise positioning",
+                      desc: "Building toward Limassol and beyond.",
+                    },
+                  ].map((item, i, arr) => (
+                    <div
+                      key={i}
+                      className={`flex py-4 ${i !== arr.length - 1 ? "border-b border-[var(--rule)]" : ""}`}
+                    >
+                      <div className="w-[140px] flex-shrink-0 font-medium text-[var(--proposal-accent)]">
+                        {item.label}
+                      </div>
+                      <div className="flex-1 text-[var(--proposal-muted)]">
+                        {item.desc}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="text-2xl font-light text-center pt-4 border-t border-[var(--rule)]">
+                  €5,500 setup + €1,500/month
+                </div>
+                <p className="text-[0.8rem] text-[var(--proposal-muted)] text-center mt-2">
+                  3-month minimum commitment
+                </p>
+              </div>
+
+              <h3 className="text-[1.1rem] font-medium mt-8 mb-4 text-[var(--ink)]">
+                Investment Breakdown
+              </h3>
+              <div className="my-8">
+                {[
+                  {
+                    label: "December: Setup + Strategy",
+                    amount: "€5,500",
+                  },
+                  {
+                    label: "January: Growth Management",
+                    amount: "€1,500",
+                  },
+                  {
+                    label: "February: Growth Management",
+                    amount: "€1,500",
+                  },
+                  {
+                    label: "March: Growth Management",
+                    amount: "€1,500",
+                  },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex justify-between py-3 border-b border-[var(--rule)]"
+                  >
+                    <span>{item.label}</span>
+                    <span className="font-medium">
+                      {item.amount}
+                    </span>
+                  </div>
+                ))}
+                <div className="flex justify-between bg-[var(--proposal-accent)] text-white m-0 -mx-4 p-4 font-medium">
+                  <span>Total Commitment</span>
+                  <span>€10,000</span>
+                </div>
+              </div>
+            </section>
+
+            {/* Why Wolsten Studios */}
+            <section className="mb-14">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
+                Why Wolsten Studios
+              </h2>
+              <p className="mb-6">
+                We don't just advise, we build.
+              </p>
+
+              <div className="my-6">
+                {[
+                  {
+                    label: "Direct access",
+                    desc: "You work with me directly. No juniors, no handoffs.",
+                  },
+                  {
+                    label: "Speed",
+                    desc: "December deliverables done before Christmas.",
+                  },
+                  {
+                    label: "Quality",
+                    desc: "Apple-grade design. Nothing less.",
+                  },
+                  {
+                    label: "Network",
+                    desc: "Access to investors and opportunities.",
+                  },
+                  {
+                    label: "Skin in the game",
+                    desc: "I succeed when you succeed.",
+                  },
+                ].map((item, i, arr) => (
+                  <div
+                    key={i}
+                    className={`flex py-3 ${i !== arr.length - 1 ? "border-b border-[var(--rule)]" : ""}`}
+                  >
+                    <div className="w-[130px] flex-shrink-0 font-medium text-[var(--proposal-accent)]">
+                      {item.label}
+                    </div>
+                    <div className="flex-1 text-[var(--proposal-muted)]">
+                      {item.desc}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-[1.1rem] italic text-[var(--proposal-muted)] text-center p-8 my-8 border-l-[3px] border-[var(--proposal-accent)] bg-white">
+                "I'm not here to build you a website and
+                disappear. I'm offering a growth partnership. When
+                the time is right, I'll put investors in front of
+                you."
+              </div>
+            </section>
+
+            {/* Next Steps */}
+            <section className="mb-14">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
+                Next Steps
+              </h2>
+
+              <div className="my-6">
+                {[
+                  "Choose your option",
+                  "Confirm via WhatsApp",
+                  "December invoice issued",
+                  "Work begins immediately",
+                  "LinkedIn first — we start telling your story",
+                  "Website + ads development",
+                  "Live before Christmas",
+                ].map((step, i) => (
+                  <div key={i} className="flex py-2.5">
+                    <div className="w-[30px] flex-shrink-0 font-medium text-[var(--proposal-accent)]">
+                      {i + 1}.
+                    </div>
+                    <div className="flex-1">{step}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-12 pt-8 border-t border-[var(--rule)]">
+                <p className="font-medium mb-1">Dan Wolsten</p>
+                <p className="text-[var(--proposal-muted)] text-[0.9rem]">
+                  Founder, Wolsten Studios
+                </p>
+              </div>
+            </section>
+
+            {/* Appendix: Deliverables */}
+            <section className="mb-14">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
+                Appendix: Deliverables
+              </h2>
+
+              <div className="my-6">
+                {[
+                  {
+                    label: "Website",
+                    desc: "Premium one-page, React/Tailwind, mobile-first, SEO-optimised. QR menu built in.",
+                  },
+                  {
+                    label: "Google Business",
+                    desc: "Full optimisation for local search and Maps visibility.",
+                  },
+                  {
+                    label: "Google Ads",
+                    desc: "Structured campaigns targeting burger searches in Pyla/Larnaca.",
+                  },
+                  {
+                    label: "Meta Ads",
+                    desc: "Strategic Facebook/Instagram replacing boosted posts.",
+                  },
+                  {
+                    label: "LinkedIn",
+                    desc: "Personal + company pages. Content focused on growth story.",
+                  },
+                  {
+                    label: "Brand Assets",
+                    desc: "Logo files, vectors, colour codes, signage-ready formats.",
+                  },
+                  {
+                    label: "Business Cards",
+                    desc: "Premium design, print-ready files.",
+                  },
+                  {
+                    label: "Email Signatures",
+                    desc: "Professional HTML signatures for team.",
+                  },
+                ].map((item, i, arr) => (
+                  <div
+                    key={i}
+                    className={`flex py-4 ${i !== arr.length - 1 ? "border-b border-[var(--rule)]" : ""}`}
+                  >
+                    <div className="w-[130px] flex-shrink-0 font-medium text-[var(--ink)]">
+                      {item.label}
+                    </div>
+                    <div className="flex-1 text-[var(--proposal-muted)] text-[0.95rem]">
+                      {item.desc}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </main>
+
+          {/* Footer */}
+          <footer className="border-t border-[var(--rule)] py-12 text-center">
+            <WolstenLogo className="w-[35px] mx-auto mb-4" />
+            <p className="text-xs text-[var(--proposal-muted)] my-1">
+              <strong>Wolsten Studios</strong>
             </p>
-
-            <div className="my-6">
-              {[
-                {
-                  label: "Direct access",
-                  desc: "You work with me directly. No juniors, no handoffs.",
-                },
-                {
-                  label: "Speed",
-                  desc: "December deliverables done before Christmas.",
-                },
-                {
-                  label: "Quality",
-                  desc: "Apple-grade design. Nothing less.",
-                },
-                {
-                  label: "Network",
-                  desc: "Access to investors and opportunities.",
-                },
-                {
-                  label: "Skin in the game",
-                  desc: "I succeed when you succeed.",
-                },
-              ].map((item, i, arr) => (
-                <div
-                  key={i}
-                  className={`flex py-3 ${i !== arr.length - 1 ? "border-b border-[var(--rule)]" : ""}`}
-                >
-                  <div className="w-[130px] flex-shrink-0 font-medium text-[var(--proposal-accent)]">
-                    {item.label}
-                  </div>
-                  <div className="flex-1 text-[var(--proposal-muted)]">
-                    {item.desc}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-[1.1rem] italic text-[var(--proposal-muted)] text-center p-8 my-8 border-l-[3px] border-[var(--proposal-accent)] bg-white">
-              "I'm not here to build you a website and
-              disappear. I'm offering a growth partnership. When
-              the time is right, I'll put investors in front of
-              you."
-            </div>
-          </section>
-
-          {/* Next Steps */}
-          <section className="mb-14">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
-              Next Steps
-            </h2>
-
-            <div className="my-6">
-              {[
-                "Choose your option",
-                "Confirm via WhatsApp",
-                "December invoice issued",
-                "Work begins immediately",
-                "LinkedIn first — we start telling your story",
-                "Website + ads development",
-                "Live before Christmas",
-              ].map((step, i) => (
-                <div key={i} className="flex py-2.5">
-                  <div className="w-[30px] flex-shrink-0 font-medium text-[var(--proposal-accent)]">
-                    {i + 1}.
-                  </div>
-                  <div className="flex-1">{step}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-[var(--rule)]">
-              <p className="font-medium mb-1">Dan Wolsten</p>
-              <p className="text-[var(--proposal-muted)] text-[0.9rem]">
-                Founder, Wolsten Studios
-              </p>
-            </div>
-          </section>
-
-          {/* Appendix: Deliverables */}
-          <section className="mb-14">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--proposal-accent)] mb-6 pb-3 border-b border-[var(--rule)]">
-              Appendix: Deliverables
-            </h2>
-
-            <div className="my-6">
-              {[
-                {
-                  label: "Website",
-                  desc: "Premium one-page, React/Tailwind, mobile-first, SEO-optimised. QR menu built in.",
-                },
-                {
-                  label: "Google Business",
-                  desc: "Full optimisation for local search and Maps visibility.",
-                },
-                {
-                  label: "Google Ads",
-                  desc: "Structured campaigns targeting burger searches in Pyla/Larnaca.",
-                },
-                {
-                  label: "Meta Ads",
-                  desc: "Strategic Facebook/Instagram replacing boosted posts.",
-                },
-                {
-                  label: "LinkedIn",
-                  desc: "Personal + company pages. Content focused on growth story.",
-                },
-                {
-                  label: "Brand Assets",
-                  desc: "Logo files, vectors, colour codes, signage-ready formats.",
-                },
-                {
-                  label: "Business Cards",
-                  desc: "Premium design, print-ready files.",
-                },
-                {
-                  label: "Email Signatures",
-                  desc: "Professional HTML signatures for team.",
-                },
-              ].map((item, i, arr) => (
-                <div
-                  key={i}
-                  className={`flex py-4 ${i !== arr.length - 1 ? "border-b border-[var(--rule)]" : ""}`}
-                >
-                  <div className="w-[130px] flex-shrink-0 font-medium text-[var(--ink)]">
-                    {item.label}
-                  </div>
-                  <div className="flex-1 text-[var(--proposal-muted)] text-[0.95rem]">
-                    {item.desc}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        </main>
-
-        {/* Footer */}
-        <footer className="border-t border-[var(--rule)] py-12 text-center">
-          <WolstenLogo className="w-[35px] mx-auto mb-4" />
-          <p className="text-xs text-[var(--proposal-muted)] my-1">
-            <strong>Wolsten Studios</strong>
-          </p>
-          <p className="text-xs text-[var(--proposal-muted)] my-1">
-            Transformation Consultancy{" "}
-            <span className="text-[var(--proposal-accent)]">
-              ·
-            </span>{" "}
-            Cyprus
-          </p>
-        </footer>
-      </div>
+            <p className="text-xs text-[var(--proposal-muted)] my-1">
+              Transformation Consultancy{" "}
+              <span className="text-[var(--proposal-accent)]">
+                ·
+              </span>{" "}
+              Cyprus
+            </p>
+          </footer>
+        </div>
+      </main>
     </div>
   );
 }
