@@ -144,7 +144,7 @@ export default function App() {
   return (
     <Router>
       <SEO />
-      <div className="min-h-screen" role="application">
+      <div className="min-h-screen">
         <SkipToContent />
         <AppContent />
       </div>

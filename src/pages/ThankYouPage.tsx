@@ -2,7 +2,6 @@ import { Navigation } from '../components/Navigation';
 import { motion } from 'motion/react';
 import { CheckCircle2, ArrowRight, Calendar, Zap } from 'lucide-react';
 import { useEffect } from 'react';
-import { SEO } from '../components/SEO';
 import { colors, spacing } from '../config/theme';
 
 export function ThankYouPage() {
@@ -19,15 +18,9 @@ export function ThankYouPage() {
   }, []);
 
   return (
-    <>
-      <SEO 
-        title="Thank You - Application Received | Wolsten Studios"
-        description="Thank you for applying to SprintOS™. We'll review your application and respond within 48 hours."
-        url="https://wolstenstudios.com/thank-you"
-      />
-      <div className="min-h-screen" style={{ backgroundColor: colors.background.light }}>
-        <Navigation />
-        
+    <div className="min-h-screen" style={{ backgroundColor: colors.background.light }}>
+      <Navigation />
+      <main id="main-content">
         {/* Hero Section */}
         <section className={`${spacing.section.px} pt-40 pb-20`}>
           <div className="max-w-4xl mx-auto text-center">
@@ -362,7 +355,7 @@ export function ThankYouPage() {
             </motion.div>
           </div>
         </section>
-      </div>
-    </>
+      </main>
+    </div>
   );
 }

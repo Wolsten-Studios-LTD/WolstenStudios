@@ -38,11 +38,6 @@ const seoConfigs: Record<string, SEOConfig> = {
     description: 'Explore Wolsten Studios transformation work with established businesses across energy, professional services, and technology sectors.',
     type: 'article',
   },
-  'brand-guide': {
-    title: 'Brand Guidelines — Wolsten Studios Visual Identity',
-    description: 'Wolsten Studios brand guidelines, visual identity system, and design standards.',
-    type: 'website',
-  },
   'privacy-policy': {
     title: 'Privacy Policy | Wolsten Studios',
     description: 'Wolsten Studios privacy policy and data handling practices for website visitors and clients.',
@@ -99,7 +94,7 @@ export function SEO() {
     } else if (path.startsWith('/privacy-policy')) {
       config = seoConfigs['privacy-policy'];
     } else if (path.startsWith('/nda')) {
-      config = seoConfigs.nda;
+      config = seoConfigs['nda'];
     } else if (path.startsWith('/client-portal')) {
       config = seoConfigs['client-portal'];
     } else if (path.startsWith('/sprint-dashboard')) {
