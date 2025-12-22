@@ -130,7 +130,7 @@ export function CaseStudiesPage() {
                   <Component
                     key={index}
                     {...(!isInPublication && {
-                      href: `#/case-studies/${study.slug}`,
+                      href: `/case-studies/${study.slug}`,
                       whileHover: { y: -2 },
                     })}
                     initial={{ opacity: 1 }}

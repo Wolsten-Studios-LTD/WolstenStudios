@@ -35,7 +35,7 @@ export function CTASection() {
           </p>
           <div className="flex gap-4 justify-center">
             <motion.a
-              href="#/application"
+              href="/application"
               className="px-10 py-5 rounded transition-all inline-block"
               style={{ 
                 backgroundColor: '#FAFAFC',
@@ -50,7 +50,7 @@ export function CTASection() {
               Start a Project
             </motion.a>
             <motion.a
-              href="#/application"
+              href="/application"
               className="px-10 py-5 rounded transition-all inline-block"
               style={{ 
                 backgroundColor: '#FAFAFC',

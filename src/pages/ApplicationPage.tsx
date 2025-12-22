@@ -53,7 +53,7 @@ export function ApplicationPage() {
     try {
       // Honeypot: if filled, quietly succeed (bots)
       if (formData.companyFax?.trim()) {
-        window.location.hash = '#/thank-you';
+        window.location.pathname = '/thank-you';
         return;
       }
 
@@ -91,7 +91,7 @@ export function ApplicationPage() {
 
       if (response.ok) {
         setIsSubmitted(true);
-        window.location.hash = '#/thank-you';
+        window.location.pathname = '/thank-you';
       } else {
         setError('There was an issue submitting your application. Please try again in a moment.');
       }
@@ -168,7 +168,7 @@ export function ApplicationPage() {
 
               <div className="mt-12">
                 <a
-                  href="#/"
+                  href="/"
                   style={{
                     display: 'inline-block',
                     color: colors.cyan.primary,

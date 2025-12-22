@@ -13,7 +13,7 @@ export function Hero() {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#0E0E0E' }}>
       {/* Navigation */}
       <nav className="px-8 py-6 flex items-center justify-between border-b" style={{ borderColor: '#2C2D2D' }}>
-        <a href="#/">
+        <a href="/">
           <img 
             src={logoImage} 
             alt="Wolsten Studios logo" 
@@ -30,21 +30,21 @@ export function Hero() {
             Work
           </a>
           <a 
-            href="#/application" 
+            href="/application" 
             className="hover:opacity-100 transition-opacity" 
             style={{ color: '#949797' }}
           >
             SprintOS™
           </a>
           <a 
-            href="#/about" 
+            href="/about" 
             className="hover:opacity-100 transition-opacity" 
             style={{ color: '#949797' }}
           >
             About
           </a>
           <a 
-            href="#/contact" 
+            href="/contact" 
             className="hover:opacity-100 transition-opacity" 
             style={{ color: '#949797' }}
           >
@@ -113,7 +113,7 @@ export function Hero() {
                 View Our Work
               </motion.button>
               <motion.a
-                href="#/application"
+                href="/application"
                 className="px-8 py-4 rounded border transition-all inline-block"
                 style={{ 
                   borderColor: '#2C2D2D',

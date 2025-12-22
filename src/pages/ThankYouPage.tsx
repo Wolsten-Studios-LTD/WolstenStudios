@@ -23,7 +23,7 @@ export function ThankYouPage() {
       <SEO 
         title="Thank You - Application Received | Wolsten Studios"
         description="Thank you for applying to SprintOS™. We'll review your application and respond within 48 hours."
-        url="https://wolstenstudios.com/#/thank-you"
+        url="https://wolstenstudios.com/thank-you"
       />
       <div className="min-h-screen" style={{ backgroundColor: colors.background.light }}>
         <Navigation />
@@ -321,7 +321,7 @@ export function ThankYouPage() {
             >
               {/* Primary CTA - Return Home */}
               <motion.a
-                href="#/"
+                href="/"
                 className="inline-flex items-center justify-center gap-3 px-10 py-5"
                 style={{ 
                   backgroundColor: colors.background.dark,
@@ -342,7 +342,7 @@ export function ThankYouPage() {
 
               {/* Secondary CTA - Learn More */}
               <motion.a
-                href="#/sprintos"
+                href="/sprintos"
                 className="inline-flex items-center justify-center gap-3 px-10 py-5"
                 style={{ 
                   backgroundColor: colors.background.white,
