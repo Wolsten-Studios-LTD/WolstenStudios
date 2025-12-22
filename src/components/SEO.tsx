@@ -4,7 +4,6 @@ import { useRouter } from './Router';
 interface SEOConfig {
   title: string;
   description: string;
-  path: string;
   type?: 'website' | 'article';
 }
 
@@ -12,55 +11,66 @@ const seoConfigs: Record<string, SEOConfig> = {
   home: {
     title: 'Wolsten Studios | Premium Transformation Studio for Established Businesses',
     description: 'Transformation studio rebuilding brand, digital, and growth foundations for businesses €500k–€20m revenue. SprintOS™ transforms your infrastructure in 7–14 days.',
-    path: '',
     type: 'website',
   },
   sprintos: {
     title: 'SprintOS™ — 7-14 Day Transformation Sprint | Wolsten Studios',
     description: 'SprintOS™ rebuilds brand architecture, digital experience, and growth foundations in 7–14 days. Complete transformation for established businesses ready to scale.',
-    path: 'sprintos',
     type: 'website',
   },
   about: {
     title: 'About Wolsten Studios — Transformation Studio for Founder-Led Businesses',
     description: 'Founded to rebuild the architecture of founder-led businesses through brand strategy, digital systems, and focused execution. Built for clarity, speed, and scale.',
-    path: 'about',
     type: 'website',
   },
   contact: {
     title: 'Contact Wolsten Studios — Submit Inquiry for Business Transformation',
     description: 'Get in touch with Wolsten Studios to discuss your brand, digital, and growth transformation. We respond to all serious inquiries within 48 hours.',
-    path: 'contact',
     type: 'website',
   },
   application: {
     title: 'Apply for SprintOS™ Transformation Sprint | Wolsten Studios',
     description: 'Submit your SprintOS™ application. We review all applications within 48 hours and respond to aligned businesses ready for transformation.',
-    path: 'application',
     type: 'website',
   },
   'case-study': {
     title: 'Case Studies — Transformation Projects | Wolsten Studios',
     description: 'Explore Wolsten Studios transformation work with established businesses across energy, professional services, and technology sectors.',
-    path: 'case-studies',
     type: 'article',
   },
   'brand-guide': {
     title: 'Brand Guidelines — Wolsten Studios Visual Identity',
     description: 'Wolsten Studios brand guidelines, visual identity system, and design standards.',
-    path: 'brand-guide',
     type: 'website',
   },
   'privacy-policy': {
     title: 'Privacy Policy | Wolsten Studios',
     description: 'Wolsten Studios privacy policy and data handling practices for website visitors and clients.',
-    path: 'privacy-policy',
     type: 'website',
   },
   nda: {
     title: 'Non-Disclosure Agreement | Wolsten Studios',
     description: 'Wolsten Studios standard non-disclosure agreement for confidential business discussions and transformation projects.',
-    path: 'nda',
+    type: 'website',
+  },
+  'client-portal': {
+    title: 'Client Portal | Wolsten Studios',
+    description: 'Secure client portal to access project updates, deliverables, and collaboration tools from Wolsten Studios.',
+    type: 'website',
+  },
+  'sprint-dashboard': {
+    title: 'Sprint Dashboard | Wolsten Studios',
+    description: 'Live view of SprintOS™ progress, milestones, and deliverables tracked by Wolsten Studios.',
+    type: 'website',
+  },
+  'buns-and-guns-proposal': {
+    title: 'Buns & Guns Proposal | Wolsten Studios',
+    description: 'Custom Buns & Guns proposal prepared by Wolsten Studios, including scope, deliverables, and timelines.',
+    type: 'website',
+  },
+  'thank-you': {
+    title: 'Thank You | Wolsten Studios',
+    description: 'Thanks for reaching out to Wolsten Studios. We will respond to your inquiry shortly.',
     type: 'website',
   },
 };
@@ -90,6 +100,14 @@ export function SEO() {
       config = seoConfigs['privacy-policy'];
     } else if (path.startsWith('/nda')) {
       config = seoConfigs.nda;
+    } else if (path.startsWith('/client-portal')) {
+      config = seoConfigs['client-portal'];
+    } else if (path.startsWith('/sprint-dashboard')) {
+      config = seoConfigs['sprint-dashboard'];
+    } else if (path.startsWith('/buns-and-guns-proposal')) {
+      config = seoConfigs['buns-and-guns-proposal'];
+    } else if (path.startsWith('/thank-you')) {
+      config = seoConfigs['thank-you'];
     }
 
     const baseUrl = 'https://www.wolstenstudios.com';

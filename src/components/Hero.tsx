@@ -22,13 +22,13 @@ export function Hero() {
           />
         </a>
         <div className="flex gap-12 text-sm" style={{ color: '#949797' }}>
-          <a 
+          <button 
             onClick={scrollToWork}
-            className="hover:opacity-100 transition-opacity cursor-pointer" 
+            className="hover:opacity-100 transition-opacity cursor-pointer border-0 bg-transparent p-0" 
             style={{ color: '#FAFAFC' }}
           >
             Work
-          </a>
+          </button>
           <a 
             href="/application" 
             className="hover:opacity-100 transition-opacity" 
