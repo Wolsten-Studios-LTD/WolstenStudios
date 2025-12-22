@@ -21,7 +21,7 @@ function AppContent() {
   const { currentPath } = useRouter();
 
   // Route matching
-  if (currentPath.startsWith('#/thank-you')) {
+  if (currentPath.startsWith('/thank-you')) {
     return (
       <div key="thank-you">
         <ThankYouPage />
@@ -30,7 +30,7 @@ function AppContent() {
     );
   }
 
-  if (currentPath.startsWith('#/about')) {
+  if (currentPath.startsWith('/about')) {
     return (
       <div key="about">
         <AboutPage />
@@ -39,7 +39,7 @@ function AppContent() {
     );
   }
 
-  if (currentPath.startsWith('#/sprintos')) {
+  if (currentPath.startsWith('/sprintos')) {
     return (
       <div key="sprintos">
         <SprintOSPage />
@@ -48,7 +48,7 @@ function AppContent() {
     );
   }
 
-  if (currentPath === '#/case-studies/stalworth') {
+  if (currentPath === '/case-studies/stalworth') {
     return (
       <div key="case-study-stalworth">
         <StalworthCaseStudyPage />
@@ -57,7 +57,7 @@ function AppContent() {
     );
   }
 
-  if (currentPath.startsWith('#/case-studies')) {
+  if (currentPath.startsWith('/case-studies')) {
     return (
       <div key="case-studies">
         <CaseStudiesPage />
@@ -66,7 +66,7 @@ function AppContent() {
     );
   }
 
-  if (currentPath.startsWith('#/contact')) {
+  if (currentPath.startsWith('/contact')) {
     return (
       <div key="contact">
         <ContactPage />
@@ -75,7 +75,7 @@ function AppContent() {
     );
   }
 
-  if (currentPath.startsWith('#/client-portal')) {
+  if (currentPath.startsWith('/client-portal')) {
     return (
       <div key="client-portal">
         <ClientPortalPage />
@@ -83,7 +83,7 @@ function AppContent() {
     );
   }
 
-  if (currentPath.startsWith('#/sprint-dashboard')) {
+  if (currentPath.startsWith('/sprint-dashboard')) {
     return (
       <div key="sprint-dashboard">
         <SprintDashboardPage />
@@ -91,7 +91,7 @@ function AppContent() {
     );
   }
 
-  if (currentPath.startsWith('#/privacy-policy')) {
+  if (currentPath.startsWith('/privacy-policy')) {
     return (
       <div key="privacy-policy">
         <PrivacyPolicyPage />
@@ -100,7 +100,7 @@ function AppContent() {
     );
   }
 
-  if (currentPath.startsWith('#/nda')) {
+  if (currentPath.startsWith('/nda')) {
     return (
       <div key="nda">
         <NDAPage />
@@ -109,7 +109,7 @@ function AppContent() {
     );
   }
 
-  if (currentPath.startsWith('#/application')) {
+  if (currentPath.startsWith('/application')) {
     return (
       <div key="application">
         <ApplicationPage />
@@ -118,7 +118,7 @@ function AppContent() {
     );
   }
 
-  if (currentPath.startsWith('#/buns-and-guns-proposal')) {
+  if (currentPath.startsWith('/buns-and-guns-proposal')) {
     return (
       <div key="buns-and-guns-proposal">
         <BunsAndGunsProposalPage />

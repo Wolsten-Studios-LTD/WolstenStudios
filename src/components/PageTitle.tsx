@@ -18,25 +18,22 @@ export function PageTitle() {
     let title = 'Wolsten Studios | Premium Transformation Studio';
     let description = 'Premium transformation studio building brands, systems, and digital experiences for founder-led businesses. €500k-€20m revenue. €15k-€35k positioning.';
 
-    if (path.startsWith('#/sprintos')) {
+    if (path.startsWith('/sprintos')) {
       title = 'SprintOS™ | Wolsten Studios';
       description = '7-14 day transformation sprints rebuilding your brand, website, and growth engine. For established businesses ready for their next stage.';
-    } else if (path.startsWith('#/about')) {
+    } else if (path.startsWith('/about')) {
       title = 'About | Wolsten Studios';
       description = 'Meet the team behind Wolsten Studios, the premium transformation studio for founder-led businesses.';
-    } else if (path.startsWith('#/contact')) {
+    } else if (path.startsWith('/contact')) {
       title = 'Contact | Wolsten Studios';
       description = 'Get in touch with Wolsten Studios to discuss your business transformation.';
-    } else if (path.startsWith('#/application')) {
+    } else if (path.startsWith('/application')) {
       title = 'Apply for SprintOS™ | Wolsten Studios';
       description = 'Submit your application for a SprintOS™ transformation sprint. We review applications within 48 hours.';
-    } else if (path.startsWith('#/case-')) {
+    } else if (path.startsWith('/case-studies')) {
       title = 'Case Study | Wolsten Studios';
       description = 'Explore our transformation work with established businesses.';
-    } else if (path.startsWith('#/brand-guide')) {
-      title = 'Brand Guide | Wolsten Studios';
-      description = 'Wolsten Studios brand guidelines and visual identity.';
-    } else if (path.startsWith('#/privacy-policy')) {
+    } else if (path.startsWith('/privacy-policy')) {
       title = 'Privacy Policy | Wolsten Studios';
       description = 'Wolsten Studios privacy policy and data handling practices.';
     }

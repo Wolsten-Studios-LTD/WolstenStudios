@@ -42,7 +42,7 @@ const seoConfigs: Record<string, SEOConfig> = {
   'case-study': {
     title: 'Case Studies — Transformation Projects | Wolsten Studios',
     description: 'Explore Wolsten Studios transformation work with established businesses across energy, professional services, and technology sectors.',
-    path: 'case-study',
+    path: 'case-studies',
     type: 'article',
   },
   'brand-guide': {
@@ -76,26 +76,25 @@ export function SEO() {
     // Determine which config to use
     let config = seoConfigs.home;
     
-    if (path.startsWith('#/sprintos')) {
+    if (path.startsWith('/sprintos')) {
       config = seoConfigs.sprintos;
-    } else if (path.startsWith('#/about')) {
+    } else if (path.startsWith('/about')) {
       config = seoConfigs.about;
-    } else if (path.startsWith('#/contact')) {
+    } else if (path.startsWith('/contact')) {
       config = seoConfigs.contact;
-    } else if (path.startsWith('#/application')) {
+    } else if (path.startsWith('/application')) {
       config = seoConfigs.application;
-    } else if (path.startsWith('#/case-')) {
+    } else if (path.startsWith('/case-studies')) {
       config = seoConfigs['case-study'];
-    } else if (path.startsWith('#/brand-guide')) {
-      config = seoConfigs['brand-guide'];
-    } else if (path.startsWith('#/privacy-policy')) {
+    } else if (path.startsWith('/privacy-policy')) {
       config = seoConfigs['privacy-policy'];
-    } else if (path.startsWith('#/nda')) {
+    } else if (path.startsWith('/nda')) {
       config = seoConfigs.nda;
     }
 
     const baseUrl = 'https://www.wolstenstudios.com';
-    const fullUrl = config.path ? `${baseUrl}/#/${config.path}` : baseUrl;
+    const normalizedPath = path === '/' ? '' : path.replace(/^\/+/, '');
+    const fullUrl = normalizedPath ? `${baseUrl}/${normalizedPath}` : baseUrl;
 
     // Update document title
     document.title = config.title;

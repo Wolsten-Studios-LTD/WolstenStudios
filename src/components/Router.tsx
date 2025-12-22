@@ -1,7 +1,7 @@
 import { useState, useEffect, ReactNode, createContext, useContext } from 'react';
 
 interface RouterContextType {
-  currentPath: string; // always "#/..."
+  currentPath: string; // always "/..."
   navigate: (path: string) => void;
 }
 
@@ -11,14 +11,14 @@ interface RouterProps {
   children: ReactNode;
 }
 
-const normalizeHash = (input: string) => {
-  const hash = (input || '').trim();
+const normalizePath = (input: string) => {
+  const path = (input || '').trim();
 
-  if (!hash || hash === '#') return '#/';
-  if (hash.startsWith('#/')) return hash;
-  if (hash.startsWith('#')) return '#/' + hash.slice(1).replace(/^\/+/, '');
-  if (hash.startsWith('/')) return '#' + hash;
-  return '#/' + hash;
+  if (!path || path === '#') return '/';
+  if (path.startsWith('#/')) return path.slice(1);
+  if (path.startsWith('#')) return '/' + path.slice(1).replace(/^\/+/, '');
+  if (path.startsWith('/')) return path;
+  return '/' + path.replace(/^\/+/, '');
 };
 
 const scrollToTop = () => {
@@ -33,22 +33,30 @@ const scrollToTop = () => {
 
 export function Router({ children }: RouterProps) {
   const [currentPath, setCurrentPath] = useState<string>(() =>
-    normalizeHash(window.location.hash)
+    normalizePath(window.location.pathname)
   );
 
   useEffect(() => {
-    const sync = () => setCurrentPath(normalizeHash(window.location.hash));
+    // Convert legacy hash URLs to path-based URLs
+    if (window.location.hash.startsWith('#/')) {
+      const normalized = normalizePath(window.location.hash);
+      window.history.replaceState({}, '', normalized);
+      setCurrentPath(normalized);
+    }
+  }, []);
 
-    const handleHashChange = () => {
+  useEffect(() => {
+    const sync = () => setCurrentPath(normalizePath(window.location.pathname));
+
+    const handlePopState = () => {
       sync();
       scrollToTop();
     };
 
-    // Critical: sync immediately on mount
     sync();
 
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   useEffect(() => {
@@ -60,12 +68,13 @@ export function Router({ children }: RouterProps) {
   }, [currentPath]);
 
   const navigate = (path: string) => {
-    const next = normalizeHash(path);
+    const next = normalizePath(path);
 
-    if (window.location.hash !== next) {
-      window.location.hash = next;
+    if (window.location.pathname !== next) {
+      window.history.pushState({}, '', next);
+      setCurrentPath(next);
+      scrollToTop();
     } else {
-      // Same-hash navigation does not fire hashchange
       setCurrentPath(next);
       scrollToTop();
     }
