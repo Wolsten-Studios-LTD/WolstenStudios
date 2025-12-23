@@ -72,7 +72,7 @@ export function ContactPage() {
               {isSubmitted ? (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
                   <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                  <h3 className="text-2xl mb-2">Message Received</h3>
+                  <h3 className="mb-2">Message Received</h3>
                   <p className="text-gray-600">
                     Thank you for reaching out. We'll respond within 48 hours.
                   </p>
@@ -80,15 +80,19 @@ export function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {errorMessage && (
-                    <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                    <div 
+                      className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+                      role="alert"
+                      aria-live="polite"
+                    >
                       {errorMessage}
                     </div>
                   )}
+                  
                   <div>
                     <label 
                       htmlFor="fullName" 
-                      className="block text-sm mb-2"
-                      style={{ color: '#151419' }}
+                      className="block text-sm text-[#151419] mb-2"
                     >
                       Full Name *
                     </label>
@@ -99,16 +103,14 @@ export function ContactPage() {
                       value={formData.fullName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#00A5C7] transition-colors"
-                      style={{ fontSize: '1rem' }}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00A5C7] focus:border-transparent transition-all"
                     />
                   </div>
 
                   <div>
                     <label 
                       htmlFor="email" 
-                      className="block text-sm mb-2"
-                      style={{ color: '#151419' }}
+                      className="block text-sm text-[#151419] mb-2"
                     >
                       Email Address *
                     </label>
@@ -119,16 +121,14 @@ export function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#00A5C7] transition-colors"
-                      style={{ fontSize: '1rem' }}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00A5C7] focus:border-transparent transition-all"
                     />
                   </div>
 
                   <div>
                     <label 
                       htmlFor="company" 
-                      className="block text-sm mb-2"
-                      style={{ color: '#151419' }}
+                      className="block text-sm text-[#151419] mb-2"
                     >
                       Company / Role
                     </label>
@@ -138,16 +138,14 @@ export function ContactPage() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#00A5C7] transition-colors"
-                      style={{ fontSize: '1rem' }}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00A5C7] focus:border-transparent transition-all"
                     />
                   </div>
 
                   <div>
                     <label 
                       htmlFor="message" 
-                      className="block text-sm mb-2"
-                      style={{ color: '#151419' }}
+                      className="block text-sm text-[#151419] mb-2"
                     >
                       Message *
                     </label>
@@ -158,30 +156,14 @@ export function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#00A5C7] transition-colors resize-none"
-                      style={{ fontSize: '1rem' }}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00A5C7] focus:border-transparent transition-all resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
-                    style={{
-                      backgroundColor: isSubmitting ? '#949797' : '#00A5C7',
-                      color: '#FFFFFF',
-                      cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                    }}
-                    onMouseEnter={(e) => {
-                      if (!isSubmitting) {
-                        e.currentTarget.style.backgroundColor = '#008FAF';
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (!isSubmitting) {
-                        e.currentTarget.style.backgroundColor = '#00A5C7';
-                      }
-                    }}
+                    className="w-full py-4 px-6 bg-[#00A5C7] text-white rounded-lg hover:bg-[#008FAF] disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2"
                   >
                     <Send className="w-5 h-5" />
                     {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -194,7 +176,7 @@ export function ContactPage() {
             <div className="lg:col-span-1 space-y-6">
               {/* Response Time */}
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg mb-3">Response Time</h3>
+                <h3 className="mb-3">Response Time</h3>
                 <p className="text-sm text-gray-600">
                   We respond to all inquiries within <strong>48 hours</strong> during business days.
                 </p>
@@ -212,21 +194,21 @@ export function ContactPage() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 mb-1">Follow us</div>
-                  <div className="group-hover:text-[#00A5C7] transition-colors">
+                  <div className="group-hover:text-[#0A66C2] transition-colors">
                     Wolsten Studios
                   </div>
                 </div>
               </a>
 
               {/* Application CTA */}
-              <div className="bg-[#0F8099] border border-[#0F8099] rounded-lg p-6 text-white">
-                <h3 className="text-lg mb-2">Ready to Transform?</h3>
-                <p className="text-sm mb-4">
+              <div className="bg-[#00A5C7] border border-[#00A5C7] rounded-lg p-6 text-white">
+                <h3 className="mb-2">Ready to Transform?</h3>
+                <p className="text-sm mb-4 opacity-95">
                   Skip the queue and apply directly for SprintOS™.
                 </p>
                 <a
                   href="/application"
-                  className="inline-block px-4 py-2 bg-white text-[#0F8099] rounded-lg hover:bg-[#E6F7FB] transition-colors text-sm font-semibold"
+                  className="inline-block px-4 py-2 bg-white text-[#00A5C7] rounded-lg hover:bg-gray-50 transition-colors text-sm"
                 >
                   Start Application
                 </a>
