@@ -4,8 +4,15 @@ import { Send, CheckCircle } from 'lucide-react';
 import { LinkedInLogo } from '../components/logos/LinkedInLogo';
 import { useState } from 'react';
 
+type ContactFormData = {
+  fullName: string;
+  email: string;
+  company: string;
+  message: string;
+};
+
 export function ContactPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     fullName: '',
     email: '',
     company: '',
@@ -15,8 +22,46 @@ export function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
+  const validateForm = (data: ContactFormData) => {
+    if (!data.fullName.trim()) {
+      return 'Please enter your full name.';
+    }
+
+    if (!data.email.trim()) {
+      return 'Please enter your email address.';
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(data.email.trim())) {
+      return 'Please enter a valid email address.';
+    }
+
+    if (!data.message.trim()) {
+      return 'Please enter a message.';
+    }
+
+    return null;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) {
+      return;
+    }
+
+    const trimmedFormData = {
+      fullName: formData.fullName.trim(),
+      email: formData.email.trim(),
+      company: formData.company.trim(),
+      message: formData.message.trim(),
+    };
+
+    const validationError = validateForm(trimmedFormData);
+    if (validationError) {
+      setErrorMessage(validationError);
+      return;
+    }
+
     setIsSubmitting(true);
     setErrorMessage(null);
 
@@ -28,10 +73,7 @@ export function ContactPage() {
         },
         body: JSON.stringify({
           subject: 'New Contact Form Submission',
-          fullName: formData.fullName,
-          email: formData.email,
-          company: formData.company,
-          message: formData.message,
+          ...trimmedFormData,
         }),
       });
 
