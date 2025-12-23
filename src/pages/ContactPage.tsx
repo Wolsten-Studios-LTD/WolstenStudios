@@ -13,10 +13,12 @@ export function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage(null);
 
     try {
       const response = await fetch('https://formspree.io/f/mvgoybwd', {
@@ -36,9 +38,12 @@ export function ContactPage() {
       if (response.ok) {
         setIsSubmitted(true);
         setFormData({ fullName: '', email: '', company: '', message: '' });
+      } else {
+        setErrorMessage('Something went wrong. Please try again in a moment.');
       }
     } catch (error) {
       console.error('Form submission error:', error);
+      setErrorMessage('Unable to send your message right now. Please check your connection and retry.');
     } finally {
       setIsSubmitting(false);
     }
@@ -74,6 +79,11 @@ export function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {errorMessage && (
+                    <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                      {errorMessage}
+                    </div>
+                  )}
                   <div>
                     <label 
                       htmlFor="fullName" 
@@ -197,8 +207,8 @@ export function ContactPage() {
                 rel="noopener noreferrer"
                 className="flex items-start gap-4 group bg-gray-50 border border-gray-200 rounded-lg p-6 hover:border-[#00A5C7] transition-colors"
               >
-                <div className="w-12 h-12 bg-[rgba(255,255,255,0)] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#008FAF] transition-colors bg-[rgba(0,165,199,0)]">
-                  <LinkedInLogo className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#E8F3FF] group-hover:bg-[#0A66C2] transition-colors">
+                  <LinkedInLogo className="w-6 h-6 text-[#0A66C2] group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 mb-1">Follow us</div>
@@ -209,14 +219,14 @@ export function ContactPage() {
               </a>
 
               {/* Application CTA */}
-              <div className="bg-[#00A5C7] bg-opacity-5 border border-[#00A5C7] border-opacity-20 rounded-lg p-6">
-                <h3 className="text-lg mb-2 text-[rgb(255,255,255)]">Ready to Transform?</h3>
-                <p className="text-sm text-[rgb(255,255,255)] mb-4">
+              <div className="bg-[#0F8099] border border-[#0F8099] rounded-lg p-6 text-white">
+                <h3 className="text-lg mb-2">Ready to Transform?</h3>
+                <p className="text-sm mb-4">
                   Skip the queue and apply directly for SprintOS™.
                 </p>
                 <a
                   href="/application"
-                  className="inline-block px-4 py-2 bg-[#151419] text-white rounded-lg hover:bg-[#00A5C7] transition-colors text-sm"
+                  className="inline-block px-4 py-2 bg-white text-[#0F8099] rounded-lg hover:bg-[#E6F7FB] transition-colors text-sm font-semibold"
                 >
                   Start Application
                 </a>
