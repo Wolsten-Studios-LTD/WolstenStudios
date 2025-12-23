@@ -1,21 +1,32 @@
 import { Router, useRouter } from './components/Router';
-import { HomePage } from './pages/HomePage';
-import { AboutPage } from './pages/AboutPage';
-import { ApplicationPage } from './pages/ApplicationPage';
-import { SprintOSPage } from './pages/SprintOSPage';
-import { CaseStudiesPage } from './pages/CaseStudiesPage';
-import { ContactPage } from './pages/ContactPage';
-import { StalworthCaseStudyPage } from './pages/StalworthCaseStudyPage';
-import { ClientPortalPage } from './pages/ClientPortalPage';
-import { SprintDashboardPage } from './pages/SprintDashboardPage';
-import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
-import { NDAPage } from './pages/NDAPage';
-import { ThankYouPage } from './pages/ThankYouPage';
-import { BunsAndGunsProposalPage } from './pages/BunsAndGunsProposalPage';
 import { Footer } from './components/Footer';
 import { SEO } from './components/SEO';
 import { SkipToContent } from './components/SkipToContent';
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
+
+const HomePage = lazy(() => import('./pages/HomePage').then((module) => ({ default: module.HomePage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then((module) => ({ default: module.AboutPage })));
+const ApplicationPage = lazy(() => import('./pages/ApplicationPage').then((module) => ({ default: module.ApplicationPage })));
+const SprintOSPage = lazy(() => import('./pages/SprintOSPage').then((module) => ({ default: module.SprintOSPage })));
+const CaseStudiesPage = lazy(() => import('./pages/CaseStudiesPage').then((module) => ({ default: module.CaseStudiesPage })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then((module) => ({ default: module.ContactPage })));
+const StalworthCaseStudyPage = lazy(() =>
+  import('./pages/StalworthCaseStudyPage').then((module) => ({ default: module.StalworthCaseStudyPage }))
+);
+const ClientPortalPage = lazy(() =>
+  import('./pages/ClientPortalPage').then((module) => ({ default: module.ClientPortalPage }))
+);
+const SprintDashboardPage = lazy(() =>
+  import('./pages/SprintDashboardPage').then((module) => ({ default: module.SprintDashboardPage }))
+);
+const PrivacyPolicyPage = lazy(() =>
+  import('./pages/PrivacyPolicyPage').then((module) => ({ default: module.PrivacyPolicyPage }))
+);
+const NDAPage = lazy(() => import('./pages/NDAPage').then((module) => ({ default: module.NDAPage })));
+const ThankYouPage = lazy(() => import('./pages/ThankYouPage').then((module) => ({ default: module.ThankYouPage })));
+const BunsAndGunsProposalPage = lazy(() =>
+  import('./pages/BunsAndGunsProposalPage').then((module) => ({ default: module.BunsAndGunsProposalPage }))
+);
 
 function AppContent() {
   const { currentPath } = useRouter();
@@ -146,7 +157,20 @@ export default function App() {
       <SEO />
       <div className="min-h-screen">
         <SkipToContent />
-        <AppContent />
+        <Suspense
+          fallback={
+            <div
+              className="flex items-center justify-center py-16"
+              role="status"
+              aria-live="polite"
+              style={{ color: '#4B5563', fontSize: '0.95rem' }}
+            >
+              <p>Loading content…</p>
+            </div>
+          }
+        >
+          <AppContent />
+        </Suspense>
       </div>
     </Router>
   );

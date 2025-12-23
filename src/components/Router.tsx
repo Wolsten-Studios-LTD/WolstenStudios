@@ -60,11 +60,16 @@ export function Router({ children }: RouterProps) {
   }, []);
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'page_view', {
-        page_path: currentPath,
-      });
-    }
+    if (typeof window === 'undefined') return;
+    const gtag = (window as any).gtag;
+    if (!gtag) return;
+
+    const pagePath = currentPath || '/';
+    const config = { page_path: pagePath };
+
+    gtag('config', 'G-C1NXZVQVKD', config);
+    gtag('config', 'AW-17799960396', config);
+    gtag('event', 'page_view', { page_path: pagePath });
   }, [currentPath]);
 
   const navigate = (path: string) => {

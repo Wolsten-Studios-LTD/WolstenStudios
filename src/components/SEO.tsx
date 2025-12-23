@@ -7,6 +7,10 @@ interface SEOConfig {
   type?: 'website' | 'article';
 }
 
+const BASE_URL = 'https://www.wolstenstudios.com';
+const SOCIAL_IMAGE = `${BASE_URL}/og-image.png`;
+const SITE_NAME = 'Wolsten Studios';
+
 const seoConfigs: Record<string, SEOConfig> = {
   home: {
     title: 'Wolsten Studios | Premium Transformation Studio for Established Businesses',
@@ -105,9 +109,8 @@ export function SEO() {
       config = seoConfigs['thank-you'];
     }
 
-    const baseUrl = 'https://www.wolstenstudios.com';
     const normalizedPath = path === '/' ? '' : path.replace(/^\/+/, '');
-    const fullUrl = normalizedPath ? `${baseUrl}/${normalizedPath}` : baseUrl;
+    const fullUrl = normalizedPath ? `${BASE_URL}/${normalizedPath}` : BASE_URL;
 
     // Update document title
     document.title = config.title;
@@ -120,10 +123,16 @@ export function SEO() {
     updateMetaTag('property', 'og:description', config.description);
     updateMetaTag('property', 'og:url', fullUrl);
     updateMetaTag('property', 'og:type', config.type || 'website');
+    updateMetaTag('property', 'og:site_name', SITE_NAME);
+    updateMetaTag('property', 'og:image', SOCIAL_IMAGE);
+    updateMetaTag('property', 'og:image:width', '1200');
+    updateMetaTag('property', 'og:image:height', '630');
     
     // Update Twitter Card tags
     updateMetaTag('name', 'twitter:title', config.title);
     updateMetaTag('name', 'twitter:description', config.description);
+    updateMetaTag('name', 'twitter:card', 'summary_large_image');
+    updateMetaTag('name', 'twitter:image', SOCIAL_IMAGE);
 
     // Update canonical link
     updateCanonicalLink(fullUrl);
