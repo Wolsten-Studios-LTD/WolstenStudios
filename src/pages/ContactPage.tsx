@@ -80,7 +80,11 @@ export function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {errorMessage && (
-                    <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                    <div
+                      className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+                      role="alert"
+                      aria-live="polite"
+                    >
                       {errorMessage}
                     </div>
                   )}
@@ -212,7 +216,7 @@ export function ContactPage() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 mb-1">Follow us</div>
-                  <div className="group-hover:text-[#00A5C7] transition-colors">
+                  <div className="group-hover:text-[#0A66C2] transition-colors">
                     Wolsten Studios
                   </div>
                 </div>
