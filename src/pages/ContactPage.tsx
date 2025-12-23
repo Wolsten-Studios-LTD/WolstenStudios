@@ -59,12 +59,16 @@ export function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      <PageTitle />
       <main id="main-content" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6">
-          <PageTitle 
-            title="Let's Talk"
-            subtitle="Get in touch to discuss your transformation"
-          />
+          {/* Page Header */}
+          <div className="text-center mb-16">
+            <h1 className="mb-4">Let's Talk</h1>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Get in touch to discuss your transformation
+            </p>
+          </div>
           
           <div className="mt-16 grid lg:grid-cols-3 gap-12">
             {/* Contact Form */}
