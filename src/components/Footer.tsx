@@ -3,8 +3,8 @@ import { WolstenIconWhite } from './logos/WolstenIconWhite';
 
 const footerLinks = {
   company: [
-    { label: 'Work', href: '/' },
-    { label: 'SprintOS™', href: '/sprintos' },
+    { label: 'Work', href: '/case-studies' },
+    { label: 'Services', href: '/#services' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
   ],
@@ -30,9 +30,9 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <WolstenIconWhite style={{ height: '40px', width: 'auto', display: 'block' }} />
+              <WolstenIconWhite className="h-10 w-auto block" />
             </div>
-            <p style={{ color: '#949797', fontSize: '0.938rem', lineHeight: '1.7', maxWidth: '400px' }}>
+            <p className="text-slate-400 text-[15px] leading-relaxed max-w-[400px]">
               Premium transformation studio building brands, systems, and digital experiences for founder-led businesses.
             </p>
           </div>

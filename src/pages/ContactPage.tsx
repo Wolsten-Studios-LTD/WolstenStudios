@@ -248,15 +248,15 @@ export function ContactPage() {
 
               {/* Application CTA */}
               <div className="bg-[#00A5C7] border border-[#00A5C7] rounded-lg p-6 text-white">
-                <h3 className="mb-2">Ready to Transform?</h3>
+                <h3 className="mb-2">Need a Landing Page?</h3>
                 <p className="text-sm mb-4 opacity-95">
-                  Skip the queue and apply directly for SprintOS™.
+                  Get a custom landing page built and managed for you.
                 </p>
                 <a
-                  href="/application"
+                  href="/#hatchit"
                   className="inline-block px-4 py-2 bg-white text-[#00A5C7] rounded-lg hover:bg-gray-50 transition-colors text-sm"
                 >
-                  Start Application
+                  Learn About HatchIt
                 </a>
               </div>
             </div>

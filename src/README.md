@@ -1,6 +1,6 @@
-# Wolsten SprintOS™ Website
+# Wolsten Studios Website
 
-Premium business transformation website for Wolsten Studios, featuring the SprintOS™ methodology.
+Brand strategy, websites, and growth systems for established businesses.
 
 ## Tech Stack
 
@@ -28,21 +28,23 @@ npm run preview
 
 ## Deployment
 
-This site is designed to be deployed on Netlify with continuous deployment from GitHub.
+Deployed on Vercel with continuous deployment from GitHub.
 
-### Netlify Configuration
+### Vercel Configuration
 
 - Build command: `npm run build`
-- Publish directory: `dist`
+- Output directory: `dist`
 - Node version: 18.x or higher
 
-## Brand Assets
+## Services
 
-- Parent Company: **Wolsten Studios**
-- Flagship Product: **SprintOS™**
-- Investment Range: £15,000 - £35,000
-- Sprint Duration: 7-14 days
-- Methodology: 5-stage transformation process
+- **Brand Strategy** — Positioning, messaging, visual identity
+- **Website Build** — React + Tailwind, production-ready
+- **Growth Setup** — Google & Meta Ads, campaigns
+
+## Products
+
+- **Managed HatchIt** — €999 landing page build + €199/mo management
 
 ## Contact
 
@@ -50,4 +52,4 @@ hello@wolstenstudios.com
 
 ---
 
-© 2024 Wolsten Studios. SprintOS™ is a trademark of Wolsten Studios Ltd.
+© 2026 Wolsten Studios.

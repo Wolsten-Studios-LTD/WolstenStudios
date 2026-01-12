@@ -177,8 +177,7 @@ export function PrivacyPolicyPage() {
             <ul style={{ color: '#606260', fontSize: '1rem', lineHeight: '1.8', paddingLeft: '24px', marginBottom: '16px' }}>
               <li>Google Workspace</li>
               <li>Notion</li>
-              <li>Figma</li>
-              <li>ClickUp</li>
+              <li>GitHub</li>
               <li>Encrypted cloud storage</li>
             </ul>
             <p style={{ color: '#606260', fontSize: '1rem', lineHeight: '1.8', marginBottom: '12px' }}>
@@ -258,10 +257,9 @@ export function PrivacyPolicyPage() {
               We may use third-party tools for analytics, project delivery, or communication, including:
             </p>
             <ul style={{ color: '#606260', fontSize: '1rem', lineHeight: '1.8', paddingLeft: '24px', marginBottom: '16px' }}>
-              <li>Figma / Figma Make</li>
-              <li>ClickUp</li>
+              <li>GitHub</li>
               <li>Notion</li>
-              <li>Vercel / Netlify (for hosting generated sites)</li>
+              <li>Vercel (for hosting)</li>
               <li>Google Analytics</li>
             </ul>
             <p style={{ color: '#606260', fontSize: '1rem', lineHeight: '1.8', marginBottom: '16px' }}>

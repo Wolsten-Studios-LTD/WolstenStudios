@@ -26,7 +26,7 @@ export function Navigation() {
         className="flex items-center border-0 bg-transparent p-0 cursor-pointer" 
         aria-label="Wolsten Studios home"
       >
-        <WolstenIcon style={{ height: '32px', width: 'auto', display: 'block' }} />
+        <WolstenIcon className="h-8 w-auto block" />
       </button>
 
       {/* Desktop Navigation */}
@@ -44,10 +44,15 @@ export function Navigation() {
             e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
-          Case Studies
+          Work
         </button>
         <button 
-          onClick={() => handleNavigate('/sprintos')}
+          onClick={() => {
+            handleNavigate('/');
+            setTimeout(() => {
+              document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+          }}
           className="transition-all duration-200 border-0 bg-transparent cursor-pointer" 
           style={{ color: '#606260', textDecoration: 'none' }}
           onMouseEnter={(e) => {
@@ -59,7 +64,7 @@ export function Navigation() {
             e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
-          SprintOS™
+          Services
         </button>
         <button 
           onClick={() => handleNavigate('/about')}
@@ -133,10 +138,16 @@ export function Navigation() {
                 e.currentTarget.style.color = '#606260';
               }}
             >
-              Case Studies
+              Work
             </button>
             <button 
-              onClick={() => handleNavigate('/sprintos')}
+              onClick={() => {
+                handleNavigate('/');
+                setTimeout(() => {
+                  document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+                setIsMenuOpen(false);
+              }}
               className="transition-all duration-200 border-0 bg-transparent cursor-pointer text-left" 
               style={{ color: '#606260', fontSize: '1rem' }}
               onMouseEnter={(e) => {
@@ -146,7 +157,7 @@ export function Navigation() {
                 e.currentTarget.style.color = '#606260';
               }}
             >
-              SprintOS™
+              Services
             </button>
             <button 
               onClick={() => handleNavigate('/about')}

@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import { colors, typography } from '../../config/theme';
 import { fadeInUp, durations, easings } from '../../config/animations';
 
 interface SectionHeaderProps {
@@ -8,7 +7,6 @@ interface SectionHeaderProps {
   description?: string;
   align?: 'left' | 'center';
   light?: boolean;
-  maxWidth?: string;
 }
 
 export function SectionHeader({ 
@@ -17,46 +15,23 @@ export function SectionHeader({
   description, 
   align = 'left',
   light = false,
-  maxWidth = '700px'
 }: SectionHeaderProps) {
-  const textAlign = align === 'center' ? 'text-center' : '';
-  const marginAuto = align === 'center' ? 'mx-auto' : '';
+  const centered = align === 'center';
   
   return (
     <motion.div 
-      className={`mb-16 ${textAlign}`}
+      className={`mb-16 ${centered ? 'text-center' : ''}`}
       {...fadeInUp}
       transition={{ duration: durations.medium, ease: easings.smooth }}
     >
-      <p 
-        className="mb-4"
-        style={{ 
-          color: light ? colors.cyan.primary : colors.text.secondary,
-          ...typography.eyebrow,
-        }}
-      >
+      <p className={`mb-4 text-xs font-semibold tracking-[0.15em] uppercase ${light ? 'text-cyan-400' : 'text-slate-500'}`}>
         {eyebrow}
       </p>
-      <h2 
-        className={marginAuto}
-        style={{ 
-          color: light ? colors.text.white : colors.text.primary,
-          ...typography.h2,
-          maxWidth: maxWidth,
-        }}
-      >
+      <h2 className={`text-3xl md:text-4xl font-semibold tracking-tight max-w-[700px] ${centered ? 'mx-auto' : ''} ${light ? 'text-white' : 'text-slate-900'}`}>
         {title}
       </h2>
       {description && (
-        <p 
-          className={`mt-6 ${marginAuto}`}
-          style={{ 
-            color: light ? colors.text.light : colors.text.secondary,
-            fontSize: '1.125rem',
-            lineHeight: '1.7',
-            maxWidth: '600px',
-          }}
-        >
+        <p className={`mt-6 text-lg leading-relaxed max-w-[600px] ${centered ? 'mx-auto' : ''} ${light ? 'text-slate-300' : 'text-slate-600'}`}>
           {description}
         </p>
       )}

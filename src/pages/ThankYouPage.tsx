@@ -80,7 +80,7 @@ export function ThankYouPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.35, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
               >
-                Thank you for applying to SprintOS™. We review all applications manually and will respond within 48 hours if there's alignment.
+                Thank you for getting in touch. We review all inquiries and will respond within 48 hours.
               </motion.p>
 
               {/* Additional context */}
@@ -333,9 +333,9 @@ export function ThankYouPage() {
                 <ArrowRight size={20} />
               </motion.a>
 
-              {/* Secondary CTA - Learn More */}
+              {/* Secondary CTA - View Services */}
               <motion.a
-                href="/sprintos"
+                href="/#services"
                 className="inline-flex items-center justify-center gap-3 px-10 py-5"
                 style={{ 
                   backgroundColor: colors.background.white,
@@ -350,7 +350,7 @@ export function ThankYouPage() {
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.15, ease: [0.4, 0, 0.2, 1] }}
               >
-                Learn About SprintOS™
+                View Our Services
               </motion.a>
             </motion.div>
           </div>
