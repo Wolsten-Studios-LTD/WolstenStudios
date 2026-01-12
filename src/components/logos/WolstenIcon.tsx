@@ -1,8 +1,6 @@
 export function WolstenIcon({ className }: { className?: string }) {
   return (
     <svg 
-      width="271" 
-      height="194" 
       viewBox="0 0 271 194" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
