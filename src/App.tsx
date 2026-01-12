@@ -24,9 +24,6 @@ const PrivacyPolicyPage = lazy(() =>
 );
 const NDAPage = lazy(() => import('./pages/NDAPage').then((module) => ({ default: module.NDAPage })));
 const ThankYouPage = lazy(() => import('./pages/ThankYouPage').then((module) => ({ default: module.ThankYouPage })));
-const BunsAndGunsProposalPage = lazy(() =>
-  import('./pages/BunsAndGunsProposalPage').then((module) => ({ default: module.BunsAndGunsProposalPage }))
-);
 
 function AppContent() {
   const { currentPath } = useRouter();
@@ -124,15 +121,6 @@ function AppContent() {
     return (
       <div key="application">
         <ApplicationPage />
-        <Footer />
-      </div>
-    );
-  }
-
-  if (currentPath.startsWith('/buns-and-guns-proposal')) {
-    return (
-      <div key="buns-and-guns-proposal">
-        <BunsAndGunsProposalPage />
         <Footer />
       </div>
     );
